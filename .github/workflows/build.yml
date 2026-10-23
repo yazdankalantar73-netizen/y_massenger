@@ -44,3 +44,7 @@ jobs:
           name: Y-MESSENGER-APK
           path: bin/*.apk
           if-no-files-found: error
+
+      - name: Accept Android SDK licenses
+        run: |
+          yes | buildozer android update || true
